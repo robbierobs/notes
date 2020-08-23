@@ -170,7 +170,7 @@
 * 	**entity** - a person, place, thing or event which data will be collected and stored
 * 	**attribute** - characteristic of an entity
 * 	**relationship** - describes an association among entities
-* 	**One-to-many (1:M or 1..*) relationship** - Painter creates many paintings, but each is painted by only one painter
+* 	**One-to-many (1:M or 1..*)* relationship** - Painter creates many paintings, but each is painted by only one painter
 * 	**Many-to-many (M:N or *..*) relationship** - Employee learns many job skills, each skill learned by many employees
 * 	**One-to-one (1:1 or 1..1) relationship** - Company needs 1 manager per store. Each store has 1 manager
 * 	**Constraint** - restriction placed on the data
@@ -228,4 +228,53 @@
 * 					Collection of tables stored in the database
 * 					SQL Engine
 * 			**Entity Relationship Model** (ERM)
-*
+*			**Hadoop** - Java based, open source, high spee,d fault-tolerant distrubuted storage and computational framework
+*			**HDFS** - highly distributed, fault tolerant storage system designed to manage large amounts of data at high speeds.
+*			**MapReduce** - open source app interface that provides fast data analytics services
+Chapter 3
+* Relational Table
+	* A table is perceived as two-dimensional structure composed of rows and columns
+	* Each row (**tuple**) single entity occurrence within the entity set
+	* Column represents attribute, each column has a distinct name
+	* All values in the column must conform to the same data format
+	* Each column specific range of values (attribute **domain**)
+	* Order is immaterial to the DBMS
+	* Each table must have an attribute or combination of attributes that uniquely indentifies each row
+* **Key** consists of one or more attribute(s) that determine other attributes
+* **Determination** - state in which knowing the value of one attribute makes it possible to determine the value of another
+* **Functinoal dependence** - value of one or more attributes determines the value of one or more other attributes
+* **Determinant** - attribute whose value determines another
+* **Dependent** - attribute whose value is determined by another
+* **Full functional dependence** - funtional dependencies which the entire collection of attributes in the determinant is necessasry for the relationship.
+
+* **Types of keys**
+*	**Composite key** - composed of more than one attribute
+*	**key attribute** - an attribute that is a part of a key
+*	**superkey** - key that can uniquely identify any row in the table, determines every attribute in the row
+*	**candidate key** - minimal superkey (without any unnecessary attributes)
+*	**Entity integrity** - condition in each row (entity instance)) in the table has its own unique identity
+*	**null** - absence of any data value, never allowed in any part of the primary key
+*	**foreign key** - primary key of one table that has been placed into another table to create a common attribute
+*	**referential integrity** - condition which every reference to entity instance by another entity instance is valid
+*	**secondary key** - a key that is used strgictly for data retrieval purposes
+* **Referential integrity**
+*	Following rules are in place to avoid incorrect reference
+*		Delete rules
+*		Insert rules
+*		Update rules
+*	**Cascade delete rule**
+*		If an attempt is made to delete a record in one table where one or more records with matching foreign key values exist in another table, all associated records will be deleted
+*	**Restrict delete rule**
+*		If an attempt is made to delete a record in one table where one or more records with matchin foreign keys exist in another table, delete operation not allowed
+*	**Set-to-null delete rule**
+*		If an attempt is made to delete a record in one table where one or more records with matching foreign key values exists in another table, foreign key values are set to NULL so we know that the record they used to point to has been deleted.
+* **Integrity rules**
+* **Entity integrity**
+*	Requirment - primary key entries are unique, no part of the key may be null
+*	Purpose - Each row will have a unique identity, foreign key values can be properly referene primary key values.
+*	Example - No invoice can have a duplicate number, nor can it be null; all invoices are uniquely identified by their invoice number
+* **Referential integrity**
+*	Requirement - foreign key may have a null entry as long as not part of its table's primary key or an entry that matches primary key value in table which it is related.
+*	Purpose - Possible for attribute not to have corresponding value, impossible to have invalid entry.
+*	Example - customer might not yet have an assigned sales representative (number), but it will be impossible ot have an invalid sales repressentative (number)
+* **Relationships within the Relational Databse**
