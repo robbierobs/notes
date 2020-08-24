@@ -278,3 +278,11 @@ Chapter 3
 *	Purpose - Possible for attribute not to have corresponding value, impossible to have invalid entry.
 *	Example - customer might not yet have an assigned sales representative (number), but it will be impossible ot have an invalid sales repressentative (number)
 * **Relationships within the Relational Databse**
+*	**composite entity** (aka bridge entity, associative entity)
+*		used to link tables that originally related in an MN relationship
+* 	**Linking table** - links tables together STUDENT - ENROLL - CLASS, implements M:M relationship
+*	**index** - a orderly arrangment used to logically access rows in a table
+*	**index key** - index's reference point
+*	**unique index** - index key can only have one pointer value associated with it (row)
+* **Relational Model of Data**
+* **IMPORTANT: The Entity Relationship Model (ERM)**
