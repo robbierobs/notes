@@ -248,22 +248,22 @@ Chapter 3
 * **Full functional dependence** - funtional dependencies which the entire collection of attributes in the determinant is necessasry for the relationship.
 
 * **Types of keys**
-*	**Composite key** - composed of more than one attribute
-*	**key attribute** - an attribute that is a part of a key
-*	**superkey** - key that can uniquely identify any row in the table, determines every attribute in the row
-*	**candidate key** - minimal superkey (without any unnecessary attributes)
-*	**Entity integrity** - condition in each row (entity instance)) in the table has its own unique identity
-*	**null** - absence of any data value, never allowed in any part of the primary key
-*	**foreign key** - primary key of one table that has been placed into another table to create a common attribute
-*	**referential integrity** - condition which every reference to entity instance by another entity instance is valid
+	* **Composite key** - composed of more than one attribute
+	* **key attribute** - an attribute that is a part of a key
+	* **superkey** - key that can uniquely identify any row in the table, determines every attribute in the row
+	* **candidate key** - minimal superkey (without any unnecessary attributes)
+	* **Entity integrity** - condition in each row (entity instance)) in the table has its own unique identity
+	* **null** - absence of any data value, never allowed in any part of the primary key
+	* **foreign key** - primary key of one table that has been placed into another table to create a common attribute
+	* **referential integrity** - condition which every reference to entity instance by another entity instance is valid
 *	**secondary key** - a key that is used strgictly for data retrieval purposes
 * **Referential integrity**
-*	Following rules are in place to avoid incorrect reference
-*		Delete rules
-*		Insert rules
-*		Update rules
-*	**Cascade delete rule**
-*		If an attempt is made to delete a record in one table where one or more records with matching foreign key values exist in another table, all associated records will be deleted
+    * Following rules are in place to avoid incorrect reference
+    * Delete rules
+    * Insert rules
+    * Update rules
+    * **Cascade delete rule**
+    * If an attempt is made to delete a record in one table where one or more records with matching foreign key values exist in another table, all associated records will be deleted
 *	**Restrict delete rule**
 *		If an attempt is made to delete a record in one table where one or more records with matchin foreign keys exist in another table, delete operation not allowed
 *	**Set-to-null delete rule**
@@ -286,3 +286,21 @@ Chapter 3
 *	**unique index** - index key can only have one pointer value associated with it (row)
 * **Relational Model of Data**
 * **IMPORTANT: The Entity Relationship Model (ERM)**
+    * **required attribute** - attribute that must have a value
+    * **optional attribute** - attribute that does not have to have a value
+    * **domain** - set of possible values i.e. (0,4) for a GPA, lowest is 0, highest possible is 4
+    * **relational schema** - shorthand notation for table structure ex. TABLE NAME (KEY_ATTRIBUTE1, ATTRIBUTE 2, ... ATTRIBUTE K)
+    * **composite attribute** - an attribute that can be further subdivided into additional attributes exx. ADDRESS can be subdivided into street, city, state, zip code
+    * **single-valued attribute** - only has a single value
+    * **multivalued attribute** - has many values
+    * **derived attributes** - aka computed attributes - an attribute whose value is calculated (derived) from other attributes
+    * **participants** - entities that participate in a relationship
+    * **connectivity** - describes the relationship classifications
+    * **cardinality** - min/max numbers of entity occurrences associated with one occurence of the related entity
+    * **existence dependence** - whether an entity can exist when it is associated with anothe related entity occurrence
+    * **existence-independent** - entity can exist apart from all of its related entities, **strong entity/regular entity**
+    * **existence-dependent** - entity cannot exist apart from all of its related entities
+    * **weak relationship / non-identifying relationship** - exists if primary key of related entity does not contain a primary key component of the parent entity
+    * **strong relationship / identifying relationship** - exists when primary key of related entity contains a primary key component of the parent entity
+    * **weak entity** - entity is existence-dependent, has a primary key partially or totally derived from the parent
+
